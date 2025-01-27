@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyash Dhomne - Web Developer Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Fade-in animation */
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Slide-up animation for Hero text */
+        .slide-up {
+            animation: slideUp 1.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation for the button */
+        .scale-button {
+            animation: scaleButton 1.5s ease-out;
+        }
+
+        @keyframes scaleButton {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-green-300 to-blue-400 text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="p-4 bg-gradient-to-r from-green-400 to-blue-500 text-white shadow-md fixed top-0 w-full z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Shreyash Dhomne</h1>
+            <ul class="space-x-6 hidden md:flex">
+                <li><a href="#about" class="hover:text-gray-300 transition">About</a></li>
+                <li><a href="#skills" class="hover:text-gray-300 transition">Skills</a></li>
+                <li><a href="#projects" class="hover:text-gray-300 transition">Projects</a></li>
+                <li><a href="#contact" class="hover:text-gray-300 transition">Contact</a></li>
+            </ul>
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="flex items-center justify-center min-h-screen bg-cover bg-center bg-no-repeat relative"
+        style="background-image: url('https://source.unsplash.com/1600x900/?technology');">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="z-10 text-center text-white px-6 fade-in">
+            <h2 class="text-5xl font-extrabold mb-4 slide-up">Hi, I'm Shreyash</h2>
+            <p class="text-2xl mb-6 slide-up">A passionate web developer focused on creating dynamic, user-friendly web
+                experiences.</p>
+            <a href="#contact"
+                class="px-8 py-3 bg-blue-500 rounded-full text-lg font-semibold hover:bg-blue-600 transition scale-button">Let's
+                Collaborate
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="p-16 bg-white text-gray-800 fade-in">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">About Me</h2>
+            <div class="flex justify-center">
+                <img src="https://github.com/shreyashdhomne/personal-resume-website/blob/main/passport%20photo.jpg?raw=true"
+                    alt="Shreyash Dhomne" class="w-40 h-40 rounded-full border-4 border-green-500 shadow-xl mb-6">
+            </div>
+            <p class="text-lg max-w-3xl mx-auto">
+                I'm Shreyash Dhomne , passionate for learning new technologies and creating innovative applications.
+                I strive to build websites that are not only functional but also beautiful and intuitive to use. I'm
+                currently pursuing a B.Tech in Electronics Engineering, but my true passion lies in software development
+                and web technologies.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-gradient-to-r from-purple-400 to-pink-500 p-16 fade-in">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Skills</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+                <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+                    <h3 class="font-semibold text-xl text-gray-800 text-center">HTML</h3>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+                    <h3 class="font-semibold text-xl text-gray-800 text-center">CSS</h3>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+                    <h3 class="font-semibold text-xl text-gray-800 text-center">JavaScript</h3>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+                    <h3 class="font-semibold text-xl text-gray-800 text-center">React</h3>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105">
+                    <h3 class="font-semibold text-xl text-gray-800 text-center">SQL</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="p-16 bg-white text-gray-800 fade-in">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">My Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-xl hover:scale-105 hover:opacity-90 transition-all duration-300">
+                    <h3 class="font-semibold text-xl mb-4">Project 1: Portfolio Website</h3>
+                    <p>This project is a personal portfolio website built with HTML, CSS, and JavaScript. It showcases
+                        my skills, experience, and projects. The site is fully responsive and includes features like
+                        dark mode toggle and smooth animations for a dynamic user experience.</p>
+                </div>
+                <div
+                    class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-xl hover:scale-105 hover:opacity-90 transition-all duration-300">
+                    <h3 class="font-semibold text-xl mb-4">Project 2: Task Management App</h3>
+                    <p>A task management application built with React and Node.js, enabling users to manage their tasks
+                        efficiently. It integrates CRUD operations with a MongoDB database and uses JWT for secure
+                        authentication. The app also features drag-and-drop task reordering for an intuitive user
+                        interface.</p>
+                </div>
+                <div
+                    class="p-6 bg-gray-100 rounded-lg shadow-md hover:shadow-xl hover:scale-105 hover:opacity-90 transition-all duration-300">
+                    <h3 class="font-semibold text-xl mb-4">Project 3: E-commerce Website</h3>
+                    <p>An e-commerce platform built with React, Redux, and Firebase for real-time product listings and
+                        user authentication. It includes features like shopping cart management, product search, and
+                        secure payment gateway integration to provide a seamless shopping experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gradient-to-r from-blue-500 to-green-500 p-16 text-white fade-in">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
+            <p class="text-lg mb-8">I'd love to hear from you! Feel free to reach out for collaboration or inquiries.
+            </p>
+            <form class="max-w-md mx-auto space-y-6">
+                <input type="text" placeholder="Your Name"
+                    class="block w-full border-2 border-gray-300 rounded-lg p-4 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                <input type="email" placeholder="Your Email"
+                    class="block w-full border-2 border-gray-300 rounded-lg p-4 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                <textarea placeholder="Your Message"
+                    class="block w-full border-2 border-gray-300 rounded-lg p-4 focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
+                <button type="submit"
+                    class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition duration-300">Send
+                    Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            const menu = document.querySelector('nav ul');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
